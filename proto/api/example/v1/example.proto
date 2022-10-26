@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package example.v1;
+
+message ExampleRequest {
+  string name = 1;
+}
+
+message ExampleResponse {
+  string greeting = 1;
+}
+
+service ExampleService {
+  rpc Example(ExampleRequest) returns (ExampleResponse) {}
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string greeting = 1;
+}
+
+service HelloService {
+  rpc Hello(HelloRequest) returns (HelloResponse) {}
+}

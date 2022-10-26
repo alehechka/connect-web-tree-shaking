@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package example.v1;
+
+message OtherRequest {
+  string name = 1;
+}
+
+message OtherResponse {
+  string greeting = 1;
+}
+
+service OtherService {
+  rpc Other(OtherRequest) returns (OtherResponse) {}
+}
